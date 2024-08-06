@@ -5,7 +5,7 @@ int main()
 	int n=5;
 	int col=1;
 	int cc,temp,space=n-1;
-	for(int i=0;i<space+2;i++)
+	for(int i=0;i<space+1;i++)
 	{
 		cout<<"  ";
 	}
