@@ -16,17 +16,21 @@ bool patterncheck(string s,string pattern)
 		else words+=s[i];
 	}
 	res.push_back(words);
-	unordered_map<char,string>map;
+	unordered_map<string,char>map;
 	if(res.size()!=pattern.length()) return false;
 	for(int i=0;i<pattern.length();i++)
 	{
-		if(map[pattern[i]]=="")
+		if(map[res[i]]=='/0')
 		{
-			map[pattern[i]]=res[i];
+			map[res[i]]=pattern[i];
+			cout<<"hlo";
 		}
 		else{
-			if(map[pattern[i]]!=res[i]) return false;
+			if(map[res[i]]!=pattern[i]) {
+			cout<<"hi";
+			return false;
 		}
+	}
 	}
 	return true;
 		
